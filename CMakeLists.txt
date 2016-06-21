@@ -1,9 +1,9 @@
-module_version(1.1)
 request_dependency(cyclops)
 include_directories(${OSG_INCLUDES})
 
 add_library(pointCloud MODULE 
 	pointCloud.cpp 
+	pointCloud.h
 	TextPointsLoader.cpp 
 	TextPointsLoader.h
 	BinaryPointsLoader.cpp 
@@ -11,8 +11,10 @@ add_library(pointCloud MODULE
 	BinaryPointsReader.cpp 
 	BinaryPointsReader.h
     SphereArrayFilter.h
-    SphereArrayFilter.cpp)
-	
+    SphereArrayFilter.cpp
+    )
+
+
 target_link_libraries(pointCloud omega cyclops)
 
 declare_native_module(pointCloud)
