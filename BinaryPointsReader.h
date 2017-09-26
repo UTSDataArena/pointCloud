@@ -15,7 +15,7 @@
 using namespace omega;
 
 // Maximum number of batches a file can be split into.
-#define BINARY_POINTS_MAX_BATCHES 100
+#define BINARY_POINTS_MAX_BATCHES 10000
 
 class BinaryPointsReader: public osgDB::ReaderWriter
 {
